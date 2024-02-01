@@ -93,7 +93,7 @@
                 </g>
               </svg>
             </span>
-            <span class="app-brand-text demo menu-text fw-bolder ms-2">Online Shop</span>
+            <span class="app-brand-text demo menu-text fw-bolder ms-2"><b class="fw-bold text-danger">P</b>A<b class="fw-bold text-danger">L</b>S</span>
           </a>
 
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -172,86 +172,39 @@
             <div class="row">
               <div class="col-12">
                 <div class="card">
-                  <div class="card-header d-flex justify-content-between">
-                    <h5>Orders Detail</h5>
-                    <a href="admin-order-print.html" class="btn btn-success text-white">Print</a>
-                  </div>
+                  <h5 class="card-header">Orders</h5>
                   <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-sm">                         
-                            <tbody>
-                                <tr>
-                                    <td>ID</td>
-                                    <td>100</td>
-                                    <td>Customer ID</td>
-                                    <td>10101</td>
-                                </tr>
-                                <tr>
-                                    <td>Date</td>
-                                    <td>Fri 26-jan-2024</td>
-                                    <td>Name</td>
-                                    <td>Ankit Patel</td>
-                                </tr>
-                                <tr>
-                                    <td>Amount</td>
-                                    <td>77445</td>
-                                    <td>Address</td>
-                                    <td> 105, Eva - surbhi, <br/>
-                                        opp Aksharwadi</td>
-                                </tr>
-                                <tr class="align-text-top">
-                                    <td>Status <br/>
-                                      <select class="form-select" required>
-                                          <option value="">select status</option>
-                                          <option value="1">Confirmed</option>
-                                          <option value="2">Dispatched</option>
-                                          <option value="3">Delivered</option>
-                                          <option value="4">Canceled</option>
-                                      </select>
-                                      <br/>
-                                      <input type="submit" class="btn btn-danger w-100"
-                                      value="Change order status" />
-                                    </td>
-                                    <td>Confirmed</td>
-                                    <td>City</td>
-                                    <td>Bhavnagar - 364001</td>
-                                </tr>
-                               
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-sm mt-3">  
+                        <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Photo</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
+                                    <th width="5%">ID</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                    <th>Address</th>
+                                    <th width="5%">View</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>I Phone</td>
+                                <tr class="align-text-top">
+                                    <td>100</td>
+                                    <td>Fri 2-jan-2024</td>
+                                    <td>Confirmed</td>
+                                    <td>78222</td>
                                     <td>
-                                        <img src="https://picsum.photos/100" class="img-fluid" />
+                                        Pandya Dikshit<br/>
+                                        ,sardarnagar <br/>
+                                        opp upnishad sky <br/>
+                                        Bhavnagar - 364001
                                     </td>
-                                    <td class="text-end">125000</td>
-                                    <td class="text-end">2</td>
-                                    <td class="text-end">250000</td>
+                                    <td>
+                                        <a href="admin-orders-detail.html" title="click to see this  orders details"><i class="bx bxs-box bx-lg mb-2"></i></a>
+                                    </td>
                                 </tr>
                             </tbody>
-                            <tfooter>
-                                <tr>
-                                    <th>Grand total</th>
-                                    <th colspan="5" class="text-end">250000</th>
-                                </tr>
-                            </tfooter>
                         </table>
-                        </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -262,7 +215,7 @@
         </div>
       </div>
     </div>
-</div>
+
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>

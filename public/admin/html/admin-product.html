@@ -9,6 +9,7 @@
 
   <meta name="description" content="" />
 
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
 
   <!-- Fonts -->
@@ -92,7 +93,7 @@
                 </g>
               </svg>
             </span>
-            <span class="app-brand-text demo menu-text fw-bolder ms-2">Online Shop</span>
+            <span class="app-brand-text demo menu-text fw-bolder ms-2"><b class="fw-bold text-danger">P</b>A<b class="fw-bold text-danger">L</b>S</span>
           </a>
 
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -165,7 +166,7 @@
             <div class="row mb-3">
               <div class="col-12 d-flex justify-content-between">
                 <h4 class="fw-bold py-1 mb-1">Products</h4>
-                <a href="admin-product.html" class="btn btn-primary">Back</a>
+                <a href="admin-add-product.html" class="btn btn-primary">Add product</a>
               </div>
             </div>
             <div class="row">
@@ -174,47 +175,56 @@
                   <h5 class="card-header">Existing Product</h5>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered">
-                           <tbody class="top-text">
-                            <tr>
-                                <td width="25%">Category</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td width="25%">Product Id</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td width="25%">Name</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td width="25%">Price</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td width="25%">Stock</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td width="25%">Weight</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td width="25%">Size</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td width="25%">Detail</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td width="25%">Photo</td>
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>Sr no</th>
+                                <th>Name <br/> Category</th>
+                                <th>Price</th>
+                                <th>Photo</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody class="top-text">
+                              <tr>
+                                  <td>1</td>
+                                  <td>IPhone 
+                                    <br/>
+                                    <b class="text-danger">(Mobile)</b>
+                                  </td>
+                                  <td>125000 
+                                    <br/>
+                                    <h6 class="bg-info p-1 mt-2 text-white">(not live)</h6>
+
+                                  </td>
+                                  <td>
+                                    <img src="https://picsum.photos/100?random=1" class="img-fluid" />
+                                  </td>
+                        
+                                  <td width="22%">
+                                    <a href="admin-edit-product.html"><i class="bx bx-pencil mb-2 bx-lg"></i></a>
+                                    <a href=""> <i class="bx bx-trash bx-lg mb-2"></i></a>
+                                    <a href=""> <i class="bx bx-detail bx-lg mb-2"></i></a>
+                                  </td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>IPad
+                                  <br/>
+                                  <b class="text-danger">(Mobile)</b>
+                                </td>
+                                <td>55000</td>
                                 <td>
-                                    <img src="https://picsum.photos/300?random=2" class="img-fluid" />
+                                  <img src="https://picsum.photos/100?random=2" class="img-fluid" />
+                                </td>
+                      
+                                <td width="22%">
+                                  <a href="admin-edit-product.html"><i class="bx bx-pencil mb-2 bx-lg"></i></a>
+                                  <a href=""> <i class="bx bx-trash bx-lg mb-2"></i></a>
+                                  <a href="admin-view-product-detail.html"> <i class="bx bx-detail bx-lg mb-2"></i></a>
                                 </td>
                             </tr>
-                           </tbody>
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -227,7 +237,7 @@
         </div>
       </div>
     </div>
-  </div>
+
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>

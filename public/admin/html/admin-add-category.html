@@ -166,157 +166,46 @@
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="row mb-3">
                             <div class="col-12 d-flex justify-content-between">
-                                <h4 class="fw-bold py-1 mb-1"></h4>
-                                <!-- <a href="admin-add-category.html" class="btn btn-primary">Add category</a> -->
+                                <h4 class="fw-bold py-1 mb-1">Category</h4>
+                                <a href="admin-category.html" class="btn btn-primary">back</a>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Dashboard</h5>
+                                    <h5 class="card-header">Add new category</h5>
                                     <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 col-sm-6 col-12 col-6 mb-4">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <div
-                                                            class="card-title d-flex align-items-start justify-content-between">
-                                                            <div class="avatar flex-shrink-0">
-                                                                <img src="../assets/img/icons/unicons/chart-success.png"
-                                                                    class="rounded" />
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="d-flex justify-content-between">
-                                                            <span class="fw-semibold d-block mb-1">daily orders</span>
-                                                            <h3 class="card-title mb-2">10</h3>
-                                                        </div>
-
-                                                    </div>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="inputTitle" class="form-label">Title</label>
+                                                <input type="text" class="form-control" id="inputTitle" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputPhoto" class="form-label">Photo</label>
+                                                <input type="file" class="form-control" id="inputPhoto" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Is Live</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="isLive" id="yes"
+                                                        value="yes" required>
+                                                    <label class="form-check-label" for="yes">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="isLive" id="no"
+                                                        value="no" required>
+                                                    <label class="form-check-label" for="no">
+                                                        No
+                                                    </label>
                                                 </div>
                                             </div>
-
-                                            <div class="col-lg-3 col-md-3 col-sm-6 col-12 col-6 mb-4">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <div
-                                                            class="card-title d-flex align-items-start justify-content-between">
-                                                            <div class="avatar flex-shrink-0">
-                                                                <img src="../assets/img/icons/unicons/chart-success.png"
-                                                                    class="rounded" />
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="d-flex justify-content-between">
-                                                            <span class="fw-semibold d-block mb-1">weekly orders</span>
-                                                            <h3 class="card-title mb-2">10</h3>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
+                                            <div class="text-end">
+                                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                                <button type="reset" class="btn btn-secondary">Clear all</button>
                                             </div>
-
-                                            <div class="col-lg-3 col-md-3 col-sm-6 col-12 col-6 mb-4">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <div
-                                                            class="card-title d-flex align-items-start justify-content-between">
-                                                            <div class="avatar flex-shrink-0">
-                                                                <img src="../assets/img/icons/unicons/chart-success.png"
-                                                                    class="rounded" />
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="d-flex justify-content-between">
-                                                            <span class="fw-semibold d-block mb-1">Monthly orders</span>
-                                                            <h3 class="card-title mb-2">10</h3>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-3 col-md-3 col-sm-6 col-12 col-6 mb-4">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <div
-                                                            class="card-title d-flex align-items-start justify-content-between">
-                                                            <div class="avatar flex-shrink-0">
-                                                                <img src="../assets/img/icons/unicons/chart-success.png"
-                                                                    class="rounded" />
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="d-flex justify-content-between">
-                                                            <span class="fw-semibold d-block mb-1">Yearly orders</span>
-                                                            <h3 class="card-title mb-2">10</h3>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-2">
-                                            <div class="col-lg-4 mb-4">
-                                                <div class="card">
-                                                  <div class="card-body">
-                                                    <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
-                                                      <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
-                                                        <div class="card-title">
-                                                          <h5 class="text-nowrap mb-2 text-primary">Categories</h5>
-                                                         
-                                                        </div>
-                                                        <div class="mt-sm-auto">
-                                                         
-                                                          <h3 class="mb-0">18</h3>
-                                                        </div>
-                                                      </div>
-                                                      <div id="profileReportChart"></div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 mb-4">
-                                                <div class="card">
-                                                  <div class="card-body">
-                                                    <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
-                                                      <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
-                                                        <div class="card-title">
-                                                          <h5 class="text-nowrap mb-2 text-danger">Products</h5>
-                                                         
-                                                        </div>
-                                                        <div class="mt-sm-auto">
-                                                         
-                                                          <h3 class="mb-0">300</h3>
-                                                        </div>
-                                                      </div>
-                                                      <div id="profileReportChart"></div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 mb-4">
-                                                <div class="card">
-                                                  <div class="card-body">
-                                                    <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
-                                                      <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
-                                                        <div class="card-title">
-                                                          <h5 class="text-nowrap mb-2 text-success">Users</h5>
-                                                         
-                                                        </div>
-                                                        <div class="mt-sm-auto">
-                                                         
-                                                          <h3 class="mb-0">270000</h3>
-                                                        </div>
-                                                      </div>
-                                                      <div id="profileReportChart"></div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

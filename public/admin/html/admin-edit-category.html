@@ -93,7 +93,7 @@
                 </g>
               </svg>
             </span>
-            <span class="app-brand-text demo menu-text fw-bolder ms-2">Online Shop</span>
+            <span class="app-brand-text demo menu-text fw-bolder ms-2"><b class="fw-bold text-danger">P</b>A<b class="fw-bold text-danger">L</b>S</span>
           </a>
 
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -165,48 +165,55 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             <div class="row mb-3">
               <div class="col-12 d-flex justify-content-between">
-                <h4 class="fw-bold py-1 mb-1"></h4>
-                <!-- <a href="admin-add-category.html" class="btn btn-primary">Add category</a> -->
+                <h4 class="fw-bold py-1 mb-1">Category</h4>
+                <a href="admin-category.html" class="btn btn-primary">Back</a>
               </div>
             </div>
             <div class="row">
               <div class="col-12">
                 <div class="card">
-                  <h5 class="card-header">Customers/Users</h5>
-                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                          <thead>
-                            <tr>
-                              <th width="10%">Srno</th>
-                              <th>Email</th>
-                              <th>Mobile</th>
-                              <th width="10%">Orders</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>abc@gmail.com</td>
-                              <td>1234567890</td>
-                              <td>
-                                <a href="admin-orders.html" title="click to see this users orders"><i class="bx bxs-box bx-lg mb-2"></i></a>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                    </div>
-                 </div>
+                  <h5 class="card-header">Edit category</h5>
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="inputTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="inputTitle" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="inputPhoto" class="form-label">Photo</label>
+                        <input type="file" class="form-control" id="inputPhoto" required>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Is Live</label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="isLive" id="yes" value="yes" required>
+                          <label class="form-check-label" for="yes">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="isLive" id="no" value="no" required>
+                          <label class="form-check-label" for="no">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="reset" class="btn btn-secondary">Clear all</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
             <!-- Basic Bootstrap Table -->
-        
+
           </div>
         </div>
       </div>
     </div>
-  </div>
+
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>

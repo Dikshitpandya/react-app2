@@ -93,7 +93,7 @@
                 </g>
               </svg>
             </span>
-            <span class="app-brand-text demo menu-text fw-bolder ms-2">Online Shop</span>
+            <span class="app-brand-text demo menu-text fw-bolder ms-2"><b class="fw-bold text-danger">P</b>A<b class="fw-bold text-danger">L</b>S</span>
           </a>
 
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -102,7 +102,6 @@
         </div>
 
         <div class="menu-inner-shadow"></div>
-
         <ul class="menu-inner py-1">
           <li class="menu-item">
             <a href="admin-home.html" class="menu-link">
@@ -165,16 +164,52 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             <div class="row mb-3">
               <div class="col-12 d-flex justify-content-between">
-                <h4 class="fw-bold py-1 mb-1">catagory</h4>
-                <a href="admin-add-category.html" class="btn btn-primary">Add Category</a>
+                <h4 class="fw-bold py-1 mb-1">Categories</h4>
+                <a href="admin-add-category.html" class="btn btn-primary">Add category</a>
               </div>
             </div>
-
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <h5 class="card-header">Existing Categories</h5>
+                  <div class="table-responsive text-nowrap">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Sr No</th>
+                          <th>Title</th>
+                          <th>Photo</th>
+                          <th>Is Live?</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody  class="top-text">
+                        <tr>
+                          <td>1</td>
+                          <td>Laptop</td>
+                          <td>
+                            <img src="https://picsum.photos/100" class="img-fluid" />
+                          </td>
+                          <td>Yes</td>
+                          <td>
+                            <a href="admin-edit-category.html"><i class="bx bx-pencil bx-lg mb-2"></i></a>
+                            <a href=""> <i class="bx bx-trash bx-lg mb-2"></i></a>
+                          </td>
+                        </tr>
+    
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Basic Bootstrap Table -->
+        
           </div>
         </div>
       </div>
     </div>
-
+  </div>
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
