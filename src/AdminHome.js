@@ -1,7 +1,9 @@
 import AdminMenu from "./AdminMenu";
-export default function AdminHome()
-{
-    return (<div className="layout-wrapper layout-content-navbar">
+import VerifyLogin from "./VerifyLogin";
+export default function AdminHome() {
+  //create cookie variable
+  VerifyLogin();
+  return (<div className="layout-wrapper layout-content-navbar">
     <div className="layout-container">
       <AdminMenu />
       {/* Layout container */}

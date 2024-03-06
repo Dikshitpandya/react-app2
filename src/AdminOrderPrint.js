@@ -1,5 +1,7 @@
 import AdminMenu from "./AdminMenu";
+import VerifyLogin from "./VerifyLogin";
 export default function AdminOrderPrint() {
+    VerifyLogin();
     return(<div className="layout-wrapper layout-content-navbar">
     <div className="layout-container">
      <AdminMenu/>

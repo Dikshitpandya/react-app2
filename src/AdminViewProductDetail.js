@@ -1,11 +1,66 @@
+import { useEffect, useState } from "react";
 import AdminMenu from "./AdminMenu";
-export default function AdminViewProductDetail() {
-    return(<div className="layout-wrapper layout-content-navbar">
-    <div className="layout-container">
+import getBase, { getImgBase } from "./api";
+import axios from "axios";
+import showError from "./toast-message";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import VerifyLogin from "./VerifyLogin";
 
-    <AdminMenu />
+export default function AdminViewProductDetail() {
+  //create state object
+  let [product, setProduct] = useState({});
+  VerifyLogin();
+  let fetchParameter = function () {
+    /* fetch id of the product supplied as query string 
+    http://localhost:3000/view-product-detail/10
+    http://localhost:3000/view-product-detail/5
+    http://localhost:3000/view-product-detail/125
+    */
+
+    //store url into variable     
+    let url = window.location.href;
+    //find position of last forward slash
+    let last_slash_position = url.lastIndexOf("/") + 1;
+    //  console.log(last_slash_position);
+    //  console.log(url);
+    let parameter = url.substring(last_slash_position);
+    return parameter;
+  }
+  useEffect(() => {
+    if (product.id === undefined) {
+      let productid = fetchParameter();
+      var apiAddress = getBase() + "product.php?productid=" + productid;
+      // console.log(apiAddress);
+      axios({
+        url: apiAddress,
+        method: "get",
+        responseType: "json"
+      }).then((response) => {
+        console.log(response);
+        if (response.status !== 200) {
+          showError('page not found');
+        }
+        else if (response.data[0]['error'] !== 'no') {
+          showError(response.data[0]['error'])
+        }
+        else if (response.data[1]['total'] === 0) {
+          showError('no product found')
+        }
+        else {
+          setProduct(response.data[2]);
+        }
+      }).catch((error) => showError('oops, something went wrong'));
+
+    }
+  });
+
+  return (<div className="layout-wrapper layout-content-navbar">
+    <div className="layout-container">
+      <ToastContainer />
+      <AdminMenu />
       <div className="layout-page">
-        
+
         <div className="content-wrapper">
           <div className="container-xxl flex-grow-1 container-p-y">
             <div className="row mb-3">
@@ -24,40 +79,40 @@ export default function AdminViewProductDetail() {
                         <tbody className="top-text">
                           <tr>
                             <td width="25%">Category</td>
-                            <td />
+                            <td>{product.categorytitle}</td>
                           </tr>
                           <tr>
                             <td width="25%">Product Id</td>
-                            <td />
+                            <td>{product.id}</td>
                           </tr>
                           <tr>
                             <td width="25%">Name</td>
-                            <td />
+                            <td>{product.title}</td>
                           </tr>
                           <tr>
                             <td width="25%">Price</td>
-                            <td />
+                           <td>{product.price}</td>
                           </tr>
                           <tr>
                             <td width="25%">Stock</td>
-                            <td />
+                            <td>{product.stock}</td>
                           </tr>
                           <tr>
                             <td width="25%">Weight</td>
-                            <td />
+                            <td>{product.weight}</td>
                           </tr>
                           <tr>
                             <td width="25%">Size</td>
-                            <td />
+                            <td>{product.size}</td>
                           </tr>
                           <tr>
                             <td width="25%">Detail</td>
-                            <td />
+                            <td>{product.detail}</td>
                           </tr>
                           <tr>
                             <td width="25%">Photo</td>
                             <td>
-                              <img src="https://picsum.photos/300?random=2" className="img-fluid" />
+                            <img src={getImgBase() + "product/" + product.photo} className="img-fluid" />
                             </td>
                           </tr>
                         </tbody>
